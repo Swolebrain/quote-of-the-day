@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <style></style> 
+
+</head>
+
+<body>
+  <h1>Quote of the Day</h1>
+  <p id="quote" class=""></p>
+  
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  
+  <script>
+    //$("#quote").html("hello, is it me you're looking for?");
+    
+    $.ajax({
+      url: "http://fvi-grad.com:4004/quote",
+      success: function(resp, servertxtstatus, xhr){
+        console.log(resp);
+        
+        
+      }
+    });
+    
+  </script>
+</body>
+</html>
